@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Export3D</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta property="og:image" content="https://jonbarron.info/mipnerf/img/rays_square.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="682">
+    <meta property="og:image:height" content="682">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jonbarron.info/mipnerf/"/>
+    <meta property="og:title" content="ExPort3D" />
+    <meta property="og:description" content="Project page for ExPort3D: Learning to Generate Conditional Tri-plane for 3D-aware Expression Controllable Portrait Animation" />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ExPort3D" />
+    <meta name="twitter:description" content="Project page for ExPort3D: Learning to Generate Conditional Tri-plane for 3D-aware Expression Controllable Portrait Animation" />
+    <meta name="twitter:image" content="https://jonbarron.info/mipnerf/img/rays_square.png" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Export3D: Learning to Generate Conditional Tri-plane for</br> 3D-aware Expression-Controllable Portrait Image Animation</br> 
+                <small>
+                    Work in Progress
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://taekyungki.github.io">
+                            Taekyung Ki
+                        </a>
+                        </br> AITRICS
+                    </li>
+                    <li>
+                        <a href="https://kevinmin95.github.io">
+                            Dongchan Min
+                        </a>
+                        </br> KAIST AI
+                    </li>
+                    </li><br>
+                </ul>
+
+                <ul class="'list-inline">
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <image src="images/paper_image.png" height="60px">
+                                <h4>Paper</h4>
+                        </li>
+                        <li>
+                            <image src="images/youtube_icon.png" height="60px">
+                                <h4>Video</h4>
+                        </li>
+                        <li>
+                            <image src="images/github.png" height="60px">
+                                <h4>Code</h4>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <image src="images/overview.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Existing portrait image animation models rely on the image warping method, estimating the motion difference between the reference image and the driving image.
+                    However, they struggle to transfer cross-identity motions since appearance and expression are highly entangled in the driving image.
+                    In this paper, we present Export3D, a 3D-aware expression-controllable portrait image animation model. Further details will be provided later.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/EpH175PY1A0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    One-shot Free View Animation Results
+                </h3>
+                <p class="text-justify">
+                    Our method can generate 3D-aware videos using a single source image. We use the source expression parameter and animate by controlling the camera pose parameters.
+                    <br>- <b>First row</b>: input source image. <b>Second row</b>: free view animiation results (indlucding their depthes). 
+                </p>
+                <video id="v0" width="100%" autoplay muted loop controls>
+                    <source src="videos/free-view_vox1.mp4" type="video/mp4" />
+                </video>
+                <p class="text-justify">
+                    <b>Video 1.</b> One-shot free view animation results on Voxceleb1 test data.
+                    <br>
+                </p>
+                <video id="v0" width="100%" autoplay muted loop controls>
+                    <source src="videos/free-view_vfhq.mp4" type="video/mp4" />
+                </video>
+                <p class="text-justify">
+                    <b>Video 2.</b> One-shot free view animation results on VFHQ test data.
+                    <br><br>
+                </p>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    One-shot Reconstruction Results
+                </h3>
+                <p class="text-justify">
+                    Our method can faithfully reconstruct the facial expressions (e.g. eye-blink, lip shape) and the head pose by using a single reference image.
+                    Here we use the same source images as right above: One-shot Free View Animation Results. Note that for the intuitive comparison, we incorporate the corresponding audios to the output videos.
+                    <br>- <b>First column</b>: Groud Truth. <b>Second column</b>: Generated Result. <b> Third column</b>: Estimated Depth.
+                </p>
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id10282_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id00001_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+                <!-- <p class="text-justify">
+                    <b>Video 3.</b> One-shot Reconstruction on VFHQ test.
+                    <br>
+                </p> -->
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id10283_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id00002_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+                <!-- <p class="text-justify">
+                    <b>Video 4.</b> One-shot Reconstruction on VFHQ test data.
+                    <br>
+                </p> -->
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id10284_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id00005_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+                <!-- <p class="text-justify">
+                    <b>Video 5.</b> One-shot Reconstruction on VFHQ test data.
+                    <br>
+                </p> -->
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id10292_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="49%" controls>
+                    <source src="videos/id00007_recon-w-gt-depth.mp4" type="video/mp4" />
+                </video>
+                <!-- <p class="text-justify">
+                    <b>Video 6.</b> One-shot Reconstruction on VFHQ test data.
+                    <br>
+                </p> -->
+                <p class="text-justify ">
+                    <b>Video 3-6.</b> One-shot Reconstruction on Voxceleb1 test. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Video 7-10.</b> One-shot Reconstruction on VFHQ test.
+                    <br><br>
+                </p>
+            </div>
+        </div>
+            
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    One-shot Cross Expression+Camera Results
+                </h3>
+                <p class="text-justify">
+                    We also provide a cross expression+camera results with different identities in VFHQ.
+                    Note that our method can preserve identity only with a single reference image (<b>the first row</b>), and the expression of the driving video (<b>the first column</b>). 
+                </p>
+                <video id="v0" width="100%" controls>
+                    <source src="videos/1-cce-w-gt.mp4" type="video/mp4" />
+                </video>
+                <p class="text-justify">
+                    <b>Video 11.</b> One-shot Cross Expression+Camera on VFHQ test data (1).
+                    <br>
+                </p>
+                <video id="v0" width="100%" controls>
+                    <source src="videos/2-cce-w-gt.mp4" type="video/mp4" />
+                </video>
+                <p class="text-justify">
+                    <b>Video 12.</b> One-shot Cross Expression+Camera on VFHQ test data (2).
+                    <br>
+                </p>
+
+                <br><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Related Links
+                </h3>
+                <p class="text-justify">
+                    <a href="https://github.com/NVlabs/eg3d">EG3D</a> provides an excellent code base for our work, and 
+                    we highly inspired by <a href="https://research.nvidia.com/labs/nxp/lp3d/">Live3DPortrait</a>
+                    and <a href="https://wyhsirius.github.io/LIA-project/">LIA</a>.
+                </p>
+                <p class="text-justify">
+                    The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>, and <a href="https://jonbarron.info/mipnerf/"> Mip-NeRF</a>.
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+
+                </h3>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
