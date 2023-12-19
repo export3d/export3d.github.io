@@ -112,7 +112,7 @@
                 <p class="text-justify">
                     Existing portrait image animation models rely on the image warping method, estimating the motion difference between the reference image and the driving image.
                     However, they struggle to transfer cross-identity motions since appearance and expression are highly entangled in the driving image.
-                    In this paper, we present Export3D, a 3D-aware expression-controllable portrait image animation model. Further details will be provided later.
+                    In this paper, we present Export3D, a 3D-aware expression-controllable portrait image animation model. <b>Further details will be provided later.</b>
                 </p>
             </div>
         </div>
@@ -139,8 +139,8 @@
                     One-shot Free View Animation Results
                 </h3>
                 <p class="text-justify">
-                    Our method can generate 3D-aware videos using a single source image. We use the source expression parameter and animate by controlling the camera pose parameters.
-                    <br>- <b>First row</b>: input source image. <b>Second row</b>: free view animiation results (indlucding their depthes). 
+                    Our method can generate 3D-aware videos using a single source image. Here, we fix the expression and
+                    animate the source (the first row) by controlling the camera parameters (the second row).
                 </p>
                 <video id="v0" width="100%" autoplay muted loop controls>
                     <source src="videos/free-view_vox1.mp4" type="video/mp4" />
@@ -165,9 +165,9 @@
                     One-shot Reconstruction Results
                 </h3>
                 <p class="text-justify">
-                    Our method can faithfully reconstruct the facial expressions (e.g. eye-blink, lip shape) and the head pose by using a single reference image.
-                    Here we use the same source images as right above: One-shot Free View Animation Results. Note that for the intuitive comparison, we incorporate the corresponding audios to the output videos.
-                    <br>- <b>First column</b>: Groud Truth. <b>Second column</b>: Generated Result. <b> Third column</b>: Estimated Depth.
+                    Our method can faithfully reconstruct facial expressions (e.g., eye-blink, mouth motion) and head pose using a single reference image.
+                    Here, the source images are the same as above. Note that for intuitive comparison, we incorporate the corresponding audio into the output videos.
+                    <br>First column: Groud Truth. Second column: Generated Result.  Third column: Estimated Depth.
                 </p>
                 <video id="v0" width="49%" controls>
                     <source src="videos/id10282_recon-w-gt-depth.mp4" type="video/mp4" />
@@ -228,8 +228,8 @@
                     One-shot Cross Expression+Camera Results
                 </h3>
                 <p class="text-justify">
-                    We also provide a cross expression+camera results with different identities in VFHQ.
-                    Note that our method can preserve identity only with a single reference image (<b>the first row</b>), and the expression of the driving video (<b>the first column</b>). 
+                    We also provide cross expression+camera results with different identities in VFHQ.
+                    Our method can preserve the visual identity only with a single reference image (the first row) and the expression of the driving video (the first column). 
                 </p>
                 <video id="v0" width="100%" controls>
                     <source src="videos/1-cce-w-gt.mp4" type="video/mp4" />
@@ -256,9 +256,7 @@
                     Related Links
                 </h3>
                 <p class="text-justify">
-                    <a href="https://github.com/NVlabs/eg3d">EG3D</a> provides an excellent code base for our work, and 
-                    we highly inspired by <a href="https://research.nvidia.com/labs/nxp/lp3d/">Live3DPortrait</a>
-                    and <a href="https://wyhsirius.github.io/LIA-project/">LIA</a>.
+                    <a href="https://github.com/NVlabs/eg3d">EG3D</a> provides an excellent code base for our work.
                 </p>
                 <p class="text-justify">
                     The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>, and <a href="https://jonbarron.info/mipnerf/"> Mip-NeRF</a>.
