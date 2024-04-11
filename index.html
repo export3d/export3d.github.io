@@ -53,10 +53,8 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
+                <b>Export3D</b>:
                 Learning to Generate Conditional Tri-plane for</br> 3D-aware Expression-Controllable Portrait Animation</br> 
-                <!-- <small>
-                    Work in Progress
-                </small> -->
             </h2>
         </div>
         <div class="row">
@@ -94,17 +92,34 @@
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <image src="images/paper.png" height="60px">
-                                <h4>ArXiv</h4>
+                            <a href="https://arxiv.org/abs/2404.00636">
+                                <image src="images/paper.png" height="60px">
+                                    <h5><strong>Paper</strong></h5>
+                            </a>
                         </li>
                         <li>
                             <image src="images/youtube_icon.png" height="60px">
-                                <h4>Video</h4>
+                                <h5><strong>Video (N/A) </strong></h5>
                         </li>
                     </ul>
                 </div>
         </div>
-        <hr>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <image src="images/overview.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    In this paper, we present Export3D, a one-shot 3D-aware portrait animation method that is able to control the facial expression and camera view of a given portrait image.
+                    To achieve this, we introduce a tri-plane generator that directly generates a tri-plane of 3D prior by transferring the expression parameter of 3DMM into the source image.
+                    The tri-plane is then decoded into the image of different view through a differentiable volume rendering. Existing portrait animation methods heavily rely on image warping to transfer the expression in the motion space, challenging on disentanglement of appearance and expression.
+                    In contrast, we propose a contrastive pre-training framework for appearance-free expression parameter,
+                    eliminating undesirable appearance swap when transferring a cross-identity expression. Extensive experiments show that our pre-training framework can learn the appearance-free expression representation hidden in 3DMM,
+                    and our model can generate 3D-aware expression controllable portrait image without appearance swap in the cross-identity manner.
+                </p>
+            </div>
+        </div>
 
 
         <div class="row">
@@ -132,26 +147,6 @@
                 </p>
             </div>
         </div>
-            
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Abstract
-                </h3>
-                <image src="images/overview.png" class="img-responsive" alt="overview"><br>
-                <p class="text-justify">
-                    In this paper, we present Export3D, a one-shot 3D-aware portrait animation method that is able to control the facial expression and camera view of a given portrait image.
-                    To achieve this, we introduce a tri-plane generator that directly generates a tri-plane of 3D prior by transferring the expression parameter of 3DMM into the source image.
-                    The tri-plane is then decoded into the image of different view through a differentiable volume rendering. Existing portrait animation methods heavily rely on image warping to transfer the expression in the motion space, challenging on disentanglement of appearance and expression.
-                    In contrast, we propose a contrastive pre-training framework for appearance-free expression parameter,
-                    eliminating undesirable appearance swap when transferring a cross-identity expression. Extensive experiments show that our pre-training framework can learn the appearance-free expression representation hidden in 3DMM,
-                    and our model can generate 3D-aware expression controllable portrait image without appearance swap in the cross-identity manner.
-                </p>
-            </div>
-        </div>
-
-
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -170,10 +165,7 @@
                 <video id="v0" width="49%" controls muted>
                     <source src="videos/id00001_recon-w-gt-depth.mp4" type="video/mp4" />
                 </video>
-                <!-- <p class="text-justify">
-                    <b>Video 3.</b> One-shot Reconstruction on VFHQ test.
-                    <br>
-                </p> -->
+
                 <video id="v0" width="49%" controls muted>
                     <source src="videos/id10283_recon-w-gt-depth.mp4" type="video/mp4" />
                 </video>
@@ -181,10 +173,7 @@
                 <video id="v0" width="49%" controls muted>
                     <source src="videos/id00002_recon-w-gt-depth.mp4" type="video/mp4" />
                 </video>
-                <!-- <p class="text-justify">
-                    <b>Video 4.</b> One-shot Reconstruction on VFHQ test data.
-                    <br>
-                </p> -->
+
                 <video id="v0" width="49%" controls muted>
                     <source src="videos/id10284_recon-w-gt-depth.mp4" type="video/mp4" />
                 </video>
@@ -192,10 +181,7 @@
                 <video id="v0" width="49%" controls muted>
                     <source src="videos/id00005_recon-w-gt-depth.mp4" type="video/mp4" />
                 </video>
-                <!-- <p class="text-justify">
-                    <b>Video 5.</b> One-shot Reconstruction on VFHQ test data.
-                    <br>
-                </p> -->
+
                 <video id="v0" width="49%" controls muted>
                     <source src="videos/id10292_recon-w-gt-depth.mp4" type="video/mp4" />
                 </video>
@@ -203,10 +189,7 @@
                 <video id="v0" width="49%" controls muted>
                     <source src="videos/id00007_recon-w-gt-depth.mp4" type="video/mp4" />
                 </video>
-                <!-- <p class="text-justify">
-                    <b>Video 6.</b> One-shot Reconstruction on VFHQ test data.
-                    <br>
-                </p> -->
+
                 <p class="text-justify ">
                     <b>Video 3-6.</b> One-shot Reconstruction on Voxceleb1 test. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <b>Video 7-10.</b> One-shot Reconstruction on VFHQ test.
@@ -219,7 +202,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    One-shot Cross Expression+Camera Results
+                    One-shot Cross Identity Transfer Results
                 </h3>
                 <p class="text-justify">
                     We provide cross expression+camera results with different identities in VFHQ.
@@ -324,17 +307,47 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Expression Control along the Different Orthogonal Directions
+                    About Expression Controls
                 </h3>
-                <video id="v0" width="100%" controls muted loop>
+                <center> 
+                    <image src="images/3dmm-param_vs_clebs-param.png" class="img-responsive" alt="tsne" width="80%"><br>
+                        <p class="text-justify">
+                            We observe that raw 3DMM expression parameters still contain the appearance information even in the low-dimensional space (t-SNE),
+                            resulting in undesirable appearance swaps when cross-identity expression transfer scenarios.
+                            To alleviate this issue, we propose a contrastive pre-training framework to extract the expression information hidden in the expression parameters.
+                            Further detail about the framework is in our paper.
+                        </p>
+                </center>
+                <video id="v0" width="100%" autoplay controls muted loop>
+                    <source src="videos/3c_ablation.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="100%" autoplay controls muted loop>
+                    <source src="videos/3d_ablation.mp4" type="video/mp4" />
+                </video>
+                <p class="text-justify">
+                    <b>Video 14.</b> Ablation Studies on Expression Encoding.
+                    <br>
+                </p>
+                <br>
+                <h4>
+                    Expression Control along the Different Orthogonal Directions
+                </h4>
+
+                <center> 
+                    <p class="text-justify">
+                        At the same time, we enforce the orthogonal structure on them, representing different expressions along different basis vectors.
+                    </p>
+                </center>
+
+                <video id="v0" width="100%" autoplay controls muted loop>
                     <source src="videos/4a_linear-v1-v5.mp4" type="video/mp4" />
                 </video>
-                <video id="v0" width="100%" controls muted loop>
+                <video id="v0" width="100%" autoplay controls muted loop>
                     <source src="videos/4b_linear-v6-v10.mp4" type="video/mp4" />
                 </video>
 
                 <p class="text-justify">
-                    <b>Video 14.</b> Visualization of Expression Control along Orthogonal Directions.
+                    <b>Video 15.</b> Visualization of Expression Control along Orthogonal Directions.
                     <br>
                 </p>
                 <br><br>
@@ -346,15 +359,15 @@
                 <h3>
                     Novel-view Synthesis Results with Expression Transfer
                 </h3>
-                <video id="v0" width="100%" controls muted loop>
+                <video id="v0" width="100%" autoplay controls muted loop>
                     <source src="videos/5a_novel_view.mp4" type="video/mp4" />
                 </video>
-                <video id="v0" width="100%" controls muted loop>
+                <video id="v0" width="100%" autoplay controls muted loop>
                     <source src="videos/5b_novel_view.mp4" type="video/mp4" />
                 </video>
 
                 <p class="text-justify">
-                    <b>Video 15.</b> Results of Novel-view Synthesis with Expression Transfer.
+                    <b>Video 16.</b> Results of Novel-view Synthesis with Expression Transfer.
                     <br>
                 </p>
                 <br><br>
@@ -362,7 +375,22 @@
         </div>
 
 
-
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{ki2024learning,
+    title={Learning to Generate Conditional Tri-plane for 3D-aware Expression Controllable Portrait Animation},
+    author={Ki, Taekyung and Min, Dongchan and Chae, Gyeongsu},
+    journal={arXiv preprint arXiv:2404.00636},
+    year={2024}
+}</textarea>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
