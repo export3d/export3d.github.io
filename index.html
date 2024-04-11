@@ -312,8 +312,9 @@
                 <center> 
                     <image src="images/3dmm-param_vs_clebs-param.png" class="img-responsive" alt="tsne" width="80%"><br>
                         <p class="text-justify">
-                            We observe that raw 3DMM expression parameters still contain the appearance information even in the low-dimensional space (t-SNE),
-                            resulting in undesirable appearance swaps when cross-identity expression transfer scenarios.
+                            To explicitly control the facial expression of a given source image, we leverage 3DMM expression parameters.
+                            However, we observe that raw 3DMM expression parameters still contain the appearance information even in the low-dimensional space (t-SNE),
+                            resulting in undesirable appearance swaps such as, when cross-identity expression transfer scenarios, such as eye shape, head size, etc.
                             To alleviate this issue, we propose a contrastive pre-training framework to extract the expression information hidden in the expression parameters.
                             Further detail about the framework is in our paper.
                         </p>
