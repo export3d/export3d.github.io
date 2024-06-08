@@ -55,7 +55,9 @@
             <h2 class="col-md-12 text-center">
                 <b>Export3D</b>:
                 Learning to Generate Conditional Tri-plane for</br> 3D-aware Expression Controllable Portrait Animation</br> 
+                <b> <small>ArXiv 2024</small> </b>
             </h2>
+
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
@@ -116,7 +118,7 @@
                     The tri-plane is then decoded into the image of different view through a differentiable volume rendering. Existing portrait animation methods heavily rely on image warping to transfer the expression in the motion space, challenging on disentanglement of appearance and expression.
                     In contrast, we propose a contrastive pre-training framework for appearance-free expression parameter,
                     eliminating undesirable appearance swap when transferring a cross-identity expression. Extensive experiments show that our pre-training framework can learn the appearance-free expression representation hidden in 3DMM,
-                    and our model can generate 3D-aware expression controllable portrait image without appearance swap in the cross-identity manner.
+                    and our model can generate <strong>3D</strong>-aware <strong>ex</strong>pression controllable <strong>port</strong>rait image without appearance swap in the cross-identity manner.
                 </p>
             </div>
         </div>
@@ -314,7 +316,7 @@
                         <p class="text-justify">
                             To explicitly control the facial expression of a given source image, we leverage 3DMM expression parameters.
                             However, we observe that raw 3DMM expression parameters still contain the appearance information even in the low-dimensional space (t-SNE), resulting in undesirable appearance swaps, such as eye shape, head size, etc., when transferring cross-identity expression.
-                            To alleviate this issue, we propose a contrastive pre-training framework to extract the expression information hidden in the expression parameters.
+                            To alleviate this issue, we propose a <strong>contrastive pre-training framework to extract the expression information hidden in the expression parameters</strong>.
                             Further details about the framework are in our paper.
                         </p>
                 </center>
@@ -359,6 +361,12 @@
                 <h3>
                     Novel-view Synthesis Results with Expression Transfer
                 </h3>
+                <center> 
+                    <p class="text-justify">
+                        Our method can transfer the driving expression to the source image without any multi-view inconsistency in terms of lighting and texture.
+                    </p>
+                </center>
+
                 <video id="v0" width="100%" autoplay controls muted loop>
                     <source src="videos/5a_novel_view.mp4" type="video/mp4" />
                 </video>
